@@ -24,10 +24,16 @@ public class Test {
 	private static String dir = "C:\\Users\\channing\\Documents\\Tencent Files\\1106899075\\FileRecv\\";
 	private static String filename = "test.zip";
 	private static String txtfilename = "test.txt";
+	private static String filePath = dir + filename;
+	
 
 	public static void main(String[] args) throws Exception {
-		// System.out.println( 18647173 -2097152 - 16777216);
-		unzip(new File(dir+filename),dir,"123456");
+		System.out.println("请输入文件路径：");
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+		filePath = bufferedReader.readLine();
+		File file = new File(filePath);
+		dir = file.getParent();
+		unzip(file, dir, "");
 		readFile();
 	}
 
@@ -35,7 +41,7 @@ public class Test {
 		final int BUFFER_SIZE = 0x300000;// 缓冲区大小为3M
 
 		long perFileSize = 3 * 1024 * 1024;// 1.5G
-		File f = new File(dir + txtfilename);
+		File f = new File(dir + File.separator+ txtfilename);
 		long flength = f.length();
 		long fileCount = flength / perFileSize;
 
