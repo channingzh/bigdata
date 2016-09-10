@@ -40,7 +40,7 @@ public class Test {
 	public static void readFile() throws Exception {
 		final int BUFFER_SIZE = 0x300000;// 缓冲区大小为3M
 
-		long perFileSize = 3 * 1024 * 1024;// 1.5G
+		long perFileSize = 1024 * 1024 * 1024;// 1.5G
 		File f = new File(dir + File.separator+ txtfilename);
 		long flength = f.length();
 		long fileCount = flength / perFileSize;
