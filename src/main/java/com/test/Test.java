@@ -79,7 +79,7 @@ public class Test {
 		}
 		long end = System.currentTimeMillis();
 		print(set);
-		System.out.println("分割文件耗时：" + (end - start) + "毫秒");
+		System.out.println("耗时：" + (end - start) + "毫秒");
 	}
 
 	// 计数
