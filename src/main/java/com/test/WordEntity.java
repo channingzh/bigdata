@@ -7,6 +7,7 @@ public class WordEntity implements Comparable<WordEntity> {
         this.key = key;
         this.count = count;
     }
+    
     public int compareTo(WordEntity o) {
         int cmp = count.intValue() - o.count.intValue();
         return (cmp == 0 ? key.compareTo(o.key) : -cmp);
