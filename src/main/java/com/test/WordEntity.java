@@ -16,7 +16,7 @@ public class WordEntity implements Comparable<WordEntity> {
  
    @Override
     public String toString() {
-        return key + " 出现的次数为：" + count;
+        return key + "  出现的次数为：" + count;
     }
  
    public String getKey() {
