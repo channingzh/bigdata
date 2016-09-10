@@ -22,12 +22,12 @@ import net.lingala.zip4j.exception.ZipException;
 public class Test {
 
 	private static String dir = "C:\\Users\\channing\\Documents\\Tencent Files\\1106899075\\FileRecv\\";
-	private static String filename = "test.txt.zip";
+	private static String filename = "test.zip";
 	private static String txtfilename = "test.txt";
 
 	public static void main(String[] args) throws Exception {
 		// System.out.println( 18647173 -2097152 - 16777216);
-		unzip(new File(dir+filename),dir,"");
+		unzip(new File(dir+filename),dir,"123456");
 		readFile();
 	}
 
